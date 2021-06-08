@@ -6,7 +6,8 @@ DATA_DIR <- 'data/'
 # NAME <- 'H3K27me3_ZDNA.ENCFF695ETB.hg19'
 # NAME <- 'H3K27me3_ZDNA.ENCFF291DHI.hg38'
 # NAME <- 'H3K27me3_ZDNA.ENCFF695ETB.hg38'
-NAME <- 'DeepZ'
+# NAME <- 'DeepZ'
+NAME <- 'H3K27me3_ZDNA.intersect_with_DeepZ'
 OUT_DIR <- 'hists'
 ###
 

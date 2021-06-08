@@ -47,6 +47,7 @@ cd .. ; mkdir hists
 ![H3K27me3_ZDNA.ENCFF291DHI](pie-charts/chip_seeker.H3K27me3_ZDNA.ENCFF291DHI.hg19.filtered.plotAnnoPie.png)
 
 Для эксперимента ENCFF695ETB
+
 ![H3K27me3_ZDNA.ENCFF695ETB](pie-charts/chip_seeker.H3K27me3_ZDNA.ENCFF695ETB.hg19.filtered.plotAnnoPie.png)
 
 Объединим метки из двух отфильтрованных наборов
@@ -90,6 +91,20 @@ cd data ; wget https://raw.githubusercontent.com/Nazar1997/DeepZ/master/annotati
 
 ![DeepZ length hist](hists/len_hist.DeepZ.pdf)
 
-Скрипт для определения расположения пиков структуры относительно аннотированного генома взят из пункта для пиков из жкспериментов (просто изменены пути).
+Скрипт для определения расположения пиков структуры относительно аннотированного генома взят из пункта для пиков из экспериментов (просто изменены пути).
 
 ![DeepZ vs genome](pie-charts/chip_seeker.DeepZ.plotAnnoPie.png)
+
+## Часть 3
+
+Пересекаем bed-файлы со структурой ДНК и с метками из экспериментов
+```bash
+intersect  -a DeepZ.bed   -b H3K27me3_ZDNA.merge.hg19.bed > H3K27me3_ZDNA.intersect_with_DeepZ.bed
+```
+Число пиков: 837
+
+Распределение длин пиков
+
+![Length distribution for intersection](hists/len_hist.H3K27me3_ZDNA.intersect_with_DeepZ.pdf)
+
+
