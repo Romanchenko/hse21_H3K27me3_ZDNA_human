@@ -25,13 +25,30 @@ liftOver H3K27me3_ZDNA.ENCFF695ETB.hg38.bed ../hg38ToHg19.over.chain H3K27me3_ZD
 cd .. ; mkdir hists
 ```
 Количество пиков в H3K27me3_ZDNA.ENCFF291DHI
-- до конвертации (hg38) : 25268
-- после конвертации (hg19) : 25232
+- до конвертации (hg38) : 25268 ![](hists/len_hist.H3K27me3_ZDNA.ENCFF291DHI.hg38.pdf)
+- после конвертации (hg19) : 25232 ![](hists/len_hist.H3K27me3_ZDNA.ENCFF291DHI.hg19.pdf)
 
 Количество пиков в H3K27me3_ZDNA.ENCFF695ETB
-- до конвертации (hg38) : 25814
-- после конвертации (hg19) : 25775
+- до конвертации (hg38) : 25814 ![](hists/len_hist.H3K27me3_ZDNA.ENCFF695ETB.hg38.pdf)
+- после конвертации (hg19) : 25775 ![](hists/len_hist.H3K27me3_ZDNA.ENCFF695ETB.hg19.pdf)
 
-В качестве порога для фильтрации пиков выбрано значение 1000.
+В качестве порога для фильтрации пиков выбрано значение 500.
 ![filter_peaks.H3K27me3_ZDNA.ENCFF291DHI](hists/filter_peaks.H3K27me3_ZDNA.ENCFF291DHI.hg19.filtered.hist.pdf)
 ![filter_peaks.H3K27me3_ZDNA.ENCFF291DHI](hists/filter_peaks.H3K27me3_ZDNA.ENCFF291DHI.hg19.init.hist.pdf)
+
+**Число пиков после фильтрации:**
+- H3K27me3_ZDNA.ENCFF291DHI 19930
+- H3K27me3_ZDNA.ENCFF695ETB 24747
+
+**Расположение пиков относительно аннотированных генов**
+Для эксперимента ENCFF291DHI
+![H3K27me3_ZDNA.ENCFF291DHI](pie-charts/chip_seeker.H3K27me3_ZDNA.ENCFF291DHI.hg19.filtered.plotAnnoPie.png)
+Для эксперимента ENCFF695ETB
+![H3K27me3_ZDNA.ENCFF695ETB](pie-charts/chip_seeker.H3K27me3_ZDNA.ENCFF695ETB.hg19.filtered.plotAnnoPie.png)
+
+Объединим метки из двух отфильтрованных наборов
+```
+cd data
+cat  *.filtered.bed  |   sort -k1,1 -k2,2n   |   bedtools merge   >   H3K27me3_ZDNA.merge.hg19.bed
+```
+

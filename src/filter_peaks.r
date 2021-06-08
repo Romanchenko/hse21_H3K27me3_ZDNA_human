@@ -24,7 +24,7 @@ ggsave(paste0('filter_peaks.', NAME, '.init.hist.pdf'), path = OUT_DIR)
 # Remove long peaks
 bed_df <- bed_df %>%
   arrange(-len) %>%
-  filter(len < 1000)
+  filter(len < 500)
   
 ggplot(bed_df) +
   aes(x = len) +
