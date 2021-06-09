@@ -19,8 +19,8 @@ library("org.Hs.eg.db")
 ###
 DARA_DIR <- 'data/'
 #NAME <- 'H3K4me3_A549.intersect_with_DeepZ'
-#NAME <- 'DeepZ'
-NAME <- 'H3K27me3_ZDNA.ENCFF695ETB.hg19.filtered'
+NAME <- 'DeepZ'
+#NAME <- 'H3K27me3_ZDNA.ENCFF695ETB.hg19.filtered'
 #NAME <- 'H3K27me3_ZDNA.ENCFF291DHI.hg19.filtered'
 BED_FN <- paste0(DATA_DIR, NAME, '.bed')
 OUT_DIR <- 'pie-charts/'

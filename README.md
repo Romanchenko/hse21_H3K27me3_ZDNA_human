@@ -108,3 +108,34 @@ intersect  -a DeepZ.bed   -b H3K27me3_ZDNA.merge.hg19.bed > H3K27me3_ZDNA.inters
 ![Length distribution for intersection](hists/len_hist.H3K27me3_ZDNA.intersect_with_DeepZ.pdf)
 
 
+Треки для геномного браузера:
+```
+track visibility=dense name="DeepZ"  color=0,200,0  description="DeepZ"
+https://raw.githubusercontent.com/Romanchenko/hse21_H3K27me3_ZDNA_human/main/data/DeepZ.bed
+
+track visibility=dense name="intersect_with_DeepZ"  color=200,0,0  description="H3K27me3_ZDNA.intersect_with_DeepZ.bed"
+https://raw.githubusercontent.com/Romanchenko/hse21_H3K27me3_ZDNA_human/main/data/H3K27me3_ZDNA.intersect_with_DeepZ.bed
+```
+
+
+Сессия в браузере - http://genome.ucsc.edu/s/Romanchenko/hw_bioinf
+
+
+Хорошие позиции в браузере
+- chr1:27,286,914-27,286,985 -- тут есть пересечение с аннотированным геном RefSeq Gene KDF1 https://www.genecards.org/cgi-bin/carddisp.pl?gene=KDF1
+![Intersection with KDF1](ucsc-images/intersection-KDF1.png)
+
+- chr1:166,916,626-166,916,805 -- пересечение с интроном Human Gene ILDR2 https://www.genecards.org/cgi-bin/carddisp.pl?gene=ILDR2
+
+![Intersection with ILDR2](ucsc-images/intersection-ILDR2.png)
+
+Ассоциирование с имеющимися аннотированными генами дало результаты:
+- всего ассоциаций пиков с генами 332
+- уникальных генов 248 
+
+Результаты GO-анализа
+
+Некоторые наиболее значимые категории
+- cell proliferation involved in metanephros developmen FDR = 1.66E-02
+- regulation of resting membrane potential FDR = 2.63E-02
+- adenylate cyclase-activating dopamine receptor signaling pathway FDR = 3.16E-02
