@@ -25,16 +25,16 @@ liftOver H3K27me3_ZDNA.ENCFF695ETB.hg38.bed ../hg38ToHg19.over.chain H3K27me3_ZD
 cd .. ; mkdir hists
 ```
 Количество пиков в H3K27me3_ZDNA.ENCFF291DHI
-- до конвертации (hg38) : 25268 ![](hists/len_hist.H3K27me3_ZDNA.ENCFF291DHI.hg38.pdf)
-- после конвертации (hg19) : 25232 ![](hists/len_hist.H3K27me3_ZDNA.ENCFF291DHI.hg19.pdf)
+- до конвертации (hg38) : 25268 ![](hists/len_hist.H3K27me3_ZDNA.ENCFF291DHI.hg38.png)
+- после конвертации (hg19) : 25232 ![](hists/len_hist.H3K27me3_ZDNA.ENCFF291DHI.hg19.png)
 
 Количество пиков в H3K27me3_ZDNA.ENCFF695ETB
-- до конвертации (hg38) : 25814 ![](hists/len_hist.H3K27me3_ZDNA.ENCFF695ETB.hg38.pdf)
-- после конвертации (hg19) : 25775 ![](hists/len_hist.H3K27me3_ZDNA.ENCFF695ETB.hg19.pdf)
+- до конвертации (hg38) : 25814 ![](hists/len_hist.H3K27me3_ZDNA.ENCFF695ETB.hg38.png)
+- после конвертации (hg19) : 25775 ![](hists/len_hist.H3K27me3_ZDNA.ENCFF695ETB.hg19.png)
 
 В качестве порога для фильтрации пиков выбрано значение 500.
-![filter_peaks.H3K27me3_ZDNA.ENCFF291DHI](hists/filter_peaks.H3K27me3_ZDNA.ENCFF291DHI.hg19.filtered.hist.pdf)
-![filter_peaks.H3K27me3_ZDNA.ENCFF291DHI](hists/filter_peaks.H3K27me3_ZDNA.ENCFF291DHI.hg19.init.hist.pdf)
+![filter_peaks.H3K27me3_ZDNA.ENCFF291DHI](hists/filter_peaks.H3K27me3_ZDNA.ENCFF291DHI.hg19.filtered.hist.png)
+![filter_peaks.H3K27me3_ZDNA.ENCFF291DHI](hists/filter_peaks.H3K27me3_ZDNA.ENCFF291DHI.hg19.init.hist.png)
 
 **Число пиков после фильтрации:**
 - H3K27me3_ZDNA.ENCFF291DHI 19930
@@ -89,7 +89,7 @@ cd data ; wget https://raw.githubusercontent.com/Nazar1997/DeepZ/master/annotati
 
 Распределение длин пиков:
 
-![DeepZ length hist](hists/len_hist.DeepZ.pdf)
+![DeepZ length hist](hists/len_hist.DeepZ.png)
 
 Скрипт для определения расположения пиков структуры относительно аннотированного генома взят из пункта для пиков из экспериментов (просто изменены пути).
 
@@ -105,7 +105,7 @@ intersect  -a DeepZ.bed   -b H3K27me3_ZDNA.merge.hg19.bed > H3K27me3_ZDNA.inters
 
 Распределение длин пиков
 
-![Length distribution for intersection](hists/len_hist.H3K27me3_ZDNA.intersect_with_DeepZ.pdf)
+![Length distribution for intersection](hists/len_hist.H3K27me3_ZDNA.intersect_with_DeepZ.png)
 
 
 Треки для геномного браузера:
