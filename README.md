@@ -33,8 +33,24 @@ cd .. ; mkdir hists
 - после конвертации (hg19) : 25775 ![](hists/len_hist.H3K27me3_ZDNA.ENCFF695ETB.hg19.png)
 
 В качестве порога для фильтрации пиков выбрано значение 500.
+
+После фильтрации
+
 ![filter_peaks.H3K27me3_ZDNA.ENCFF291DHI](hists/filter_peaks.H3K27me3_ZDNA.ENCFF291DHI.hg19.filtered.hist.png)
+
+До фильтрации
+
 ![filter_peaks.H3K27me3_ZDNA.ENCFF291DHI](hists/filter_peaks.H3K27me3_ZDNA.ENCFF291DHI.hg19.init.hist.png)
+
+
+После фильтрации
+
+![filter_peaks.H3K27me3_ZDNA.ENCFF291DHI](hists/filter_peaks.H3K27me3_ZDNA.ENCFF695ETB.hg19.filtered.hist.png)
+
+До фильтрации
+
+![filter_peaks.H3K27me3_ZDNA.ENCFF291DHI](hists/filter_peaks.H3K27me3_ZDNA.ENCFF695ETB.hg19.init.hist.png)
+
 
 **Число пиков после фильтрации:**
 - H3K27me3_ZDNA.ENCFF291DHI 19930
